@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf7f4;
+  --foreground: #2d2a26;
+  --primary: #7c6a5c;
+  --primary-light: #a89585;
+  --primary-dark: #5a4d42;
+  --accent: #c4956a;
+  --accent-light: #e8cdb5;
+  --surface: #ffffff;
+  --surface-warm: #f5efe9;
+  --border: #e5ddd4;
+  --muted: #8a8279;
+  --success: #6b9e7a;
+  --danger: #c47070;
+  --calm-blue: #7a9eb8;
+  --soft-pink: #d4a0a0;
+  --warm-yellow: #d4b86a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-surface: var(--surface);
+  --color-surface-warm: var(--surface-warm);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-calm-blue: var(--calm-blue);
+  --color-soft-pink: var(--soft-pink);
+  --color-warm-yellow: var(--warm-yellow);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@keyframes breathe-in {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.5); opacity: 1; }
+}
+
+@keyframes breathe-out {
+  0% { transform: scale(1.5); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.6; }
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-gentle {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+.animate-breathe-in {
+  animation: breathe-in 4s ease-in-out forwards;
+}
+
+.animate-breathe-out {
+  animation: breathe-out 4s ease-in-out forwards;
+}
+
+.animate-pulse-gentle {
+  animation: pulse-gentle 2s ease-in-out infinite;
+}
+
+::selection {
+  background: var(--accent-light);
+  color: var(--foreground);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
