@@ -14,3 +14,25 @@ Relationship conflict support flow for moments of escalation:
 npm install
 npm run dev
 ```
+
+## Deploy to Vercel
+
+This project is configured for the `darrengalvins-projects` Vercel scope.
+
+Preview deploy:
+
+```bash
+npm run vercel:preview
+```
+
+Production deploy:
+
+```bash
+npm run vercel:prod
+```
+
+If your shell is not already authenticated with Vercel CLI, set a token first:
+
+```bash
+export VERCEL_TOKEN="your_vercel_token"
+```

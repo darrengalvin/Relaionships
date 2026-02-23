@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "vercel:preview": "npx vercel --yes --scope darrengalvins-projects",
+    "vercel:prod": "npx vercel --prod --yes --scope darrengalvins-projects"
   },
   "dependencies": {
     "next": "^16.1.6",
